@@ -6,6 +6,16 @@ A Chrome Manifest V3 extension that extracts readable text from the active webpa
 
 The extension works in Chromium-based browsers, including Google Chrome and Brave.
 
+## Demo
+
+The popup runs directly on the current tab and generates notes from the page content.
+
+![Extension popup generating webpage notes](extension_demo/extension_main_demo.png)
+
+The settings page lets users choose the LLM provider, configure model details, and edit the instruction prompt.
+
+![Extension settings page with provider toggle and instruction prompt](extension_demo/extension_setting.png)
+
 ## Features
 
 - Extracts text from the current active tab on demand.
