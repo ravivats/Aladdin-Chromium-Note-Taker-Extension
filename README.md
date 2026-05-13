@@ -1,4 +1,6 @@
-# Alladin: Chromium based webpage Note-Taker with LLM for webpage that are not publicly accessible without login. Licensed under CC BY-NC-SA 4.0.
+# Aladdin: Chromium based webpage note-taker with LLM for webpages that are not publicly accessible without login.
+
+## Licensed under CC BY-NC-SA 4.0.
 
 A Chrome Manifest V3 extension that extracts readable text from the active webpage and sends it to either the OpenAI API or a local Ollama endpoint to generate structured notes.
 
@@ -27,9 +29,7 @@ The extension works in Chromium-based browsers, including Google Chrome and Brav
 ├── popup.js           # Popup behavior, loading state, copy button, note generation trigger
 ├── options.html       # Settings page UI
 ├── options.js         # Settings persistence and provider toggle behavior
-├── styles.css         # Shared popup/options styling
-├── main.py            # Existing Python scaffold, not required by the extension
-└── pyproject.toml     # Existing Python project metadata, not required by the extension
+└── styles.css         # Shared popup/options styling
 ```
 
 ## Architecture
