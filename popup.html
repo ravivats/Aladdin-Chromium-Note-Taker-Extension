@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Webpage Notes</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="popup-body">
+    <main class="popup-shell">
+      <header class="popup-header">
+        <div>
+          <h1>Webpage Notes</h1>
+          <p>Generate structured notes from the current tab.</p>
+        </div>
+        <nav class="header-actions" aria-label="Extension settings">
+          <a class="settings-link" href="#" id="openInstruction">Edit Instruction</a>
+          <a class="settings-link" href="#" id="openOptions">Settings</a>
+        </nav>
+      </header>
+
+      <button class="primary-button" id="generateButton" type="button">
+        <span class="button-label">Generate Notes</span>
+        <span class="spinner" id="spinner" aria-hidden="true"></span>
+      </button>
+
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+
+      <label class="notes-label" for="notesOutput">Generated notes</label>
+      <textarea id="notesOutput" class="notes-output" readonly placeholder="Notes will appear here."></textarea>
+
+      <button class="secondary-button" id="copyButton" type="button" disabled>Copy to Clipboard</button>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

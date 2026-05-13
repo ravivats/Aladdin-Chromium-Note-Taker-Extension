@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Aladdin: Webpage Note-Taker with LLM",
+  "version": "1.0.0",
+  "description": "Extract the current webpage and generate structured notes with OpenAI or a local Ollama endpoint.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*",
+    "http://localhost:*/*",
+    "http://127.0.0.1:*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Generate Notes"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  }
+}

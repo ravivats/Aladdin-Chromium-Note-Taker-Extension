@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Webpage Notes Settings</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="options-shell">
+      <header class="options-header">
+        <h1>Webpage Notes Settings</h1>
+      </header>
+
+      <form id="optionsForm" class="settings-form">
+        <fieldset class="provider-fieldset">
+          <legend>LLM Provider</legend>
+          <div class="provider-toggle" role="radiogroup" aria-label="LLM Provider">
+            <label class="provider-option">
+              <input type="radio" name="provider" value="openai" id="providerOpenAI">
+              <span>OpenAI</span>
+            </label>
+            <label class="provider-option">
+              <input type="radio" name="provider" value="ollama" id="providerOllama">
+              <span>Local Ollama</span>
+            </label>
+          </div>
+          <p class="provider-note" id="providerNote">OpenAI is currently selected for note generation.</p>
+        </fieldset>
+
+        <section class="settings-section provider-section" id="openaiSettings" data-provider-section="openai">
+          <h2>OpenAI</h2>
+          <label for="openaiApiKey">API key</label>
+          <input id="openaiApiKey" type="password" autocomplete="off" placeholder="sk-...">
+
+          <label for="openaiModel">Model</label>
+          <input id="openaiModel" type="text" placeholder="gpt-4o">
+        </section>
+
+        <section class="settings-section provider-section" id="ollamaSettings" data-provider-section="ollama">
+          <h2>Local Ollama</h2>
+          <label for="ollamaEndpoint">Endpoint</label>
+          <input id="ollamaEndpoint" type="url" placeholder="http://localhost:11434/api/chat">
+
+          <label for="ollamaModel">Model</label>
+          <input id="ollamaModel" type="text" placeholder="llama3">
+        </section>
+
+        <section class="settings-section">
+          <h2>Instruction Prompt</h2>
+          <label for="instructionPrompt">System instruction</label>
+          <textarea id="instructionPrompt" rows="7"></textarea>
+        </section>
+
+        <div class="form-actions">
+          <button class="primary-button" type="submit">Save Settings</button>
+          <span class="status" id="saveStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>
