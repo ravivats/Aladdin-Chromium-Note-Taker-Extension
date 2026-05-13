@@ -32,6 +32,55 @@ The settings page lets users choose the LLM provider, configure model details, a
 - Includes a copy-to-clipboard button for generated notes.
 - Uses no external dependencies, build tools, bundlers, or npm packages.
 
+## Install From a Local Clone
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd ChromeExtensionAladin
+```
+
+### 2. Load in Google Chrome
+
+1. Open `chrome://extensions`.
+2. Enable **Developer mode**.
+3. Click **Load unpacked**.
+4. Select the cloned project directory.
+5. Pin the extension from the browser toolbar if desired.
+
+### 3. Load in Brave
+
+1. Open `brave://extensions`.
+2. Enable **Developer mode**.
+3. Click **Load unpacked**.
+4. Select the cloned project directory.
+5. Pin the extension from the browser toolbar if desired.
+
+## Configure the Extension
+
+1. Click the extension icon.
+2. Click **Settings**.
+3. Choose **OpenAI** or **Local Ollama** in the provider toggle.
+4. For OpenAI:
+   - Enter your OpenAI API key.
+   - Confirm or edit the model name.
+5. For Ollama:
+   - Confirm or edit the local endpoint.
+   - Confirm or edit the model name.
+6. Review or edit the instruction prompt.
+7. Click **Save Settings**.
+
+## Use the Extension
+
+1. Open any normal webpage.
+2. Click the extension icon.
+3. Click **Generate Notes**.
+4. Wait for the model response.
+5. Copy the generated notes if needed.
+
+The extension cannot read browser-internal pages such as `chrome://extensions`, `brave://settings`, or `about:blank`.
+
 ## Project Structure
 
 ```text
@@ -180,55 +229,6 @@ Make sure Ollama is running locally and that the selected model is available.
 - Ollama requests send page content to the configured local endpoint.
 - OpenAI API keys are stored in `chrome.storage.local`, which is local to the browser profile.
 - Do not commit API keys or other credentials to the repository.
-
-## Install From a Local Clone
-
-### 1. Clone the Repository
-
-```bash
-git clone <repository-url>
-cd ChromeExtensionAladin
-```
-
-### 2. Load in Google Chrome
-
-1. Open `chrome://extensions`.
-2. Enable **Developer mode**.
-3. Click **Load unpacked**.
-4. Select the cloned project directory.
-5. Pin the extension from the browser toolbar if desired.
-
-### 3. Load in Brave
-
-1. Open `brave://extensions`.
-2. Enable **Developer mode**.
-3. Click **Load unpacked**.
-4. Select the cloned project directory.
-5. Pin the extension from the browser toolbar if desired.
-
-## Configure the Extension
-
-1. Click the extension icon.
-2. Click **Settings**.
-3. Choose **OpenAI** or **Local Ollama** in the provider toggle.
-4. For OpenAI:
-   - Enter your OpenAI API key.
-   - Confirm or edit the model name.
-5. For Ollama:
-   - Confirm or edit the local endpoint.
-   - Confirm or edit the model name.
-6. Review or edit the instruction prompt.
-7. Click **Save Settings**.
-
-## Use the Extension
-
-1. Open any normal webpage.
-2. Click the extension icon.
-3. Click **Generate Notes**.
-4. Wait for the model response.
-5. Copy the generated notes if needed.
-
-The extension cannot read browser-internal pages such as `chrome://extensions`, `brave://settings`, or `about:blank`.
 
 ## Development
 
