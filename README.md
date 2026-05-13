@@ -12,6 +12,10 @@ The popup runs directly on the current tab and generates notes from the page con
 
 ![Extension popup generating webpage notes](extension_demo/extension_main_demo.png)
 
+It summarizes the page content into structured notes in Markdown format, which can be copied to the clipboard.
+
+![Extension popup generating webpage notes: output summary](extension_demo/extension_main_demo_result.png)
+
 The settings page lets users choose the LLM provider, configure model details, and edit the instruction prompt.
 
 ![Extension settings page with provider toggle and instruction prompt](extension_demo/extension_setting.png)
