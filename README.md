@@ -4,7 +4,7 @@
 
 A Chrome Manifest V3 extension that extracts readable text from the active webpage and sends it to either the OpenAI API or a local Ollama endpoint to generate structured notes.
 
-The extension works in Chromium-based browsers, including Google Chrome and Brave.
+The extension works in Chromium-based browsers, including Google Chrome, Brave, Microsoft Edge, ChatGPT Atlas, Perplexity Comet, Dia, Arc, Norton Neo, Opera, Vivaldi, Samsung Internet, Yandex Browser etc.
 
 ## Demo
 
